@@ -14,6 +14,13 @@ function setup() {
 function draw() {
   background(255,255,255);
   movingrect.x=World.mouseX;
-  movingrect.y=World.mouseY;  
+  movingrect.y=World.mouseY;
+  if(movingrect.x - fixedrect.x === fixedrect.width/2 + movingrect.width/2)
+  {
+    fixedrect.shapeColor="red";
+    movingrect.shapeColor="red";
+  }  
   drawSprites();
 }
+
+
